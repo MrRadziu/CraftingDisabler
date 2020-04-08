@@ -1,0 +1,8 @@
+## Messages settings
+
+# If message about disabling crafting will be send to player
+show-player-message: true
+
+# List of items for crafting disabled
+disabled-items:
+  - GOLDEN_APPLE
