@@ -1,0 +1,5 @@
+name: CraftingDisabler
+author: MrRadziu
+version: 0.0.1
+main: pl.mrradziu.mc.plugin.cd.CraftingDisabler
+load: POSTWORLD
