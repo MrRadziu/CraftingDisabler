@@ -1,4 +1,4 @@
-## Messages settings
+## CraftingDisabler Settings
 
 # If message about disabling crafting will be send to player
 show-player-message: true

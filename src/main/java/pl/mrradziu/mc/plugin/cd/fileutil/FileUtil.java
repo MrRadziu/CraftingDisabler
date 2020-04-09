@@ -8,6 +8,9 @@ import java.io.*;
 import java.net.URL;
 import java.net.URLConnection;
 
+/**
+ * Class for file operations utilities
+ */
 public class FileUtil {
 
     private static JavaPlugin plugin;
@@ -16,6 +19,12 @@ public class FileUtil {
         plugin = (JavaPlugin) Bukkit.getServer().getPluginManager().getPlugin("CraftingDisabler");
     }
 
+    /**
+     * Method to create config file and copy data from JAR config file to new file localized in Server Plugin Subfolder
+     * @param input
+     * @param target
+     * @throws IOException
+     */
     public static void copy(InputStream input, File target) throws IOException {
 
         if (target.exists()) {
@@ -56,6 +65,12 @@ public class FileUtil {
         output.close();
     }
 
+    /**
+     * Method to get input from JAR file
+     * @param path
+     * @return
+     * @throws IOException
+     */
     public static InputStream getInputFromJar(String path) throws IOException {
         if (path == null) {
             throw new IllegalArgumentException("The path cannot be null");
@@ -72,6 +87,12 @@ public class FileUtil {
         return connection.getInputStream();
     }
 
+    /**
+     * Method to load plugin configuration from Yaml file
+     * @param pathTo
+     * @param internalPath
+     * @return
+     */
     public static YamlConfiguration loadFile(String pathTo, String internalPath) {
         File conf = new File(plugin.getDataFolder() + File.separator + pathTo);
 
